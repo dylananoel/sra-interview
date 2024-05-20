@@ -1,0 +1,68 @@
+<div class="page-header">
+  <%= link_to posts_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_post_path(@post), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show post</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Title:</dt>
+  <dd><%= @post.title %></dd>
+
+  <dt>Body:</dt>
+  <dd><%= @post.body_display %></dd>
+
+  <dt>Published:</dt>
+  <dd><%= @post.published %></dd>
+
+</dl>
+
+<h1>
+  Comments
+</h1>
+<hr>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li class='comment-item'>
+      <%= comment.body_display %>
+      <%= link_to edit_comment_path(comment) do %>
+        <span class="glyphicon glyphicon-pencil"></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to new_comment_path(post_id: @post), class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-plus"></span>
+  New Comment
+<% end %>
+
+
+<h1>
+  Ratings
+</h1>
+<hr>
+
+<ul>
+  <% @post.ratings.each do |rating| %>
+    <li class='comment-item'>
+      <% (1..rating.stars).each do %>
+        <span class="glyphicon glyphicon-star"></span>
+      <% end %>
+      <%= link_to rating, method: :delete, class: 'text-danger', data: { confirm: 'Are you sure?' } do %>
+        <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to new_rating_path(post_id: @post), class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-plus"></span>
+  New Rating
+<% end %>

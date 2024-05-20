@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: comments
+#
+#  id         :integer          not null, primary key
+#  body       :text
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  post_id    :integer          not null
+#
+# Indexes
+#
+#  index_comments_on_post_id  (post_id)
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post: one
+  body: 'Awesome Post'
+
+two:
+  post: two
+  body: 'This is my comment.  There are many like it but this one is mine.'
