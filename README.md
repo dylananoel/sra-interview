@@ -23,3 +23,30 @@ bundle exec rails s
 
 ### Pre-Screening
 Refer to the TODO.md file in this repo. Implement features #1 and #2 during pre-screening.
+
+# Agenda
+
+1. We will work together to fix all the tests
+
+2. Open up BUGS.md.  We'll discuss how to attack these and implement fixes.
+
+3. You pick a new feature of your choosing to work on.  You can come up with your own idea or pick one from TODO.md.  It's OK if we don't fully finish the feature.
+
+### Tests
+
+Run model tests...
+```
+bundle exec rails test
+```
+
+Run System tests...
+```
+bundle exec rails test:system
+```
+
+Lint...
+```
+bundle exec rubocop
+```
+
+

@@ -20,13 +20,12 @@ class Post < ApplicationRecord
   scope :published, -> { where(published: true) }
 
   validate do
-    errors[:title] << 'cannot contain the string fish' if 'fish'.in? title
+    errors[:title] << 'cannot contain the string fish' if 'fish'.in? titleeee
   end
 
-  validates :title, presence: true, uniqueness: true
-  validates :body, presence: true
+  validates :title, presence: false, uniqueness: true
 
   def body_display
-    simple_format(body.html_safe, {}, sanitize: false)
+    simple_format(title.html_safe, {}, sanitize: false)
   end
 end
