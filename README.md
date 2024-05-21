@@ -21,37 +21,5 @@ Run server and access it on localhost:3000
 bundle exec rails s
 ```
 
-
-### Tests
-
-Run model tests...
-```
-bundle exec rails test
-```
-
-Run System tests...
-```
-bundle exec rails test:system
-```
-
-Lint...
-```
-bundle exec rubocop
-```
-
-
-# Agenda
-
-1) I'll give you a brief introduction to the codebase
-
-2) We will work together to fix all the tests
-
-3) Open up BUGS.md.  We'll discuss how to attack these and implement fixes.
-
-4) You pick a new feature of your choosing to work on.  You can come up with your own idea or pick one from TODO.md.  It's OK if we don't fully finish the feature.
-
-
-
-### Internal Notes
-
-https://docs.google.com/document/d/1n4p12wQsJfWQvrayDKJDyLFeZ7q66ziofcRX928kMv0/edit
+### Pre-Screening
+Refer to the TODO.md file in this repo. Implement features #1 and #2 during pre-screening.
